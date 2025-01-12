@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunny Suit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+        body {
+            font-family: 'Patrick Hand', 'Courier New', Courier, monospace;
+            background-color: #fdf6e3;
+            margin: 0;
+            padding: 20px;
+        }
+        .note-paper {
+            width: 100%;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #fdf6e3 90%, #000 90%);
+            background-size: 100% 20px;
+            padding: 20px;
+            box-sizing: border-box;
+            line-height: 20px;
+        }
+
+        .dancing-script-1 {
+  font-family: "Dancing Script", serif;
+  font-optical-sizing: auto;
+  font-weight: 1;
+  font-style: normal;
+}
+    </style>
+</head>
+<body>
+    <div class="note-paper dancing-script-1"></div>
+        <p>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const notePaper = document.querySelector('.note-paper');
+                let text = '';
+                for (let i = 0; i < 500; i++) {
+                    text += 'bunny suit ';
+                }
+                notePaper.innerHTML = `<p>${text}</p>`;
+            });
+        </script>
+    </div>
+</body>
+</html>

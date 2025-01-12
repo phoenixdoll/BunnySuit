@@ -6,8 +6,7 @@
     <title>Bunny Suit</title>
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <style>
-
-    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
         body {
             font-family: 'Patrick Hand', 'Courier New', Courier, monospace;
@@ -30,22 +29,44 @@
             font-optical-sizing: auto;
             font-weight: 1;
             font-style: normal;
+            animation: spin 4s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotateX(0deg); }
+            to { transform: rotateX(360deg); }
+        }
+
+        .centered-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3em;
+            animation: spin 4s linear infinite;
         }
     </style>
 </head>
 <body>
-    <div class="note-paper dancing-script-1"></div>
-        <p>
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const notePaper = document.querySelector('.note-paper');
-                let text = '';
-                for (let i = 0; i < 500; i++) {
-                    text += 'bunny suit ';
-                }
-                notePaper.innerHTML = `<p>${text}</p>`;
-            });
-        </script>
+    <div class="note-paper">
+        <p class="dancing-script-1">bunny suit</p>
     </div>
+    <div class="centered-text">bunny suit</div>
+    <div class="centered-text-vertical">bunny suit</div>
 </body>
 </html>
+<style>
+    @keyframes spin-vertical {
+        from { transform: rotateY(0deg); }
+        to { transform: rotateY(360deg); }
+    }
+
+    .centered-text-vertical {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3em;
+        animation: spin-vertical 4s linear infinite;
+    }
+</style>
